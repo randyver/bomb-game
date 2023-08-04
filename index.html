@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="bomb.png">
+    <title>There Is A Bomb</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Slackey&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>There Is A Bomb!</h1>
+    
+    <div class="input-length">
+      <label for="inputN">Masukkan panjang kotak :</label>
+      <input type="number" id="inputN" min="1" step="1">
+    </div>
+    
+    <button onclick="startGame()">Mulai</button>
+
+    <div id="container" style="display: none;"></div>
+    
+    <!-- <button onclick="revealSquares()">Tunjukkan Isi Kotak</button> -->
+    <button id="restartBtn" style="display: none;" onclick="restartGame()">Restart</button>
+
+    <div id="scoreContainer" style="display: none;">
+      <p>Skor: <span id="score">0</span></p>
+    </div>
+    
+
+    <div id="winModal" class="modal">
+        <div class="modal-content">
+            <h2>Selamat!</h2>
+            <p>Kamu berhasil membuka semua kotak yang benar, kamu mendapatkan +<span id="winScore">0</span> poin.</p>
+            <button onclick="hideWinModal()">OK</button>
+        </div>
+    </div>
+  
+  <div id="loseModal" class="modal">
+    <div class="modal-content">
+      <h2>Duaarrrr!</h2>
+      <p>Kamu mengklik kotak yang terdapat bom, kamu kalah.</p>
+      <button onclick="hideLoseModal()">OK</button>
+    </div>
+  </div>
+
+  <div id="isValidN" class="modal">
+    <div class="modal-content">
+      <h2>Masukkan Tidak Valid</h2>
+      <p>Nilai N harus merupakan bilangan asli antara 2 hingga 10.</p>
+      <button onclick="hideIsValidN()">OK</button>
+    </div>
+  </div>
+
+  
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
